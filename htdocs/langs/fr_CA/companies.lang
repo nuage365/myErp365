@@ -10,8 +10,12 @@ OverAllOrders=Ordres
 OverAllSupplierProposals=Demande de prix
 LocalTax1IsUsed=Assujeti à la TVQ
 LocalTax2IsUsed=Assujeti à une troisième taxe
-ProfId6Short=TVQ
-ProfId6=TVQ
+# ** DDE 2022-12-04 , Ajout des bons paramètres pour le québec, A modifier pour les autres provinces
+VATIntraShort=Numéro TPS
+VATIntra=Numéro TPS
+ProfId6Short=Numéro TVQ
+ProfId6=Numéro TVQ
+# ** DDE FIN
 ProfId1MX=Id. Prof. 1 (R.F.C).
 ProfId2MX=ID. Prof. 2 (R..P. IMSS)
 ProfId3MX=Id. Prof. 3 (Charte Profesionnelle)

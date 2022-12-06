@@ -1536,14 +1536,16 @@ class Account extends CommonObject
 	public function useDetailedBBAN()
 	{
 		$country_code = $this->getCountryCode();
-
-		if (in_array($country_code, array('FR', 'ES', 'GA', 'IT', 'NC'))) {
+		# ** DDE 2022-12-04 , Correction pour le Canada, car le canada utilise aussi des numéros de transit
+		# ** Ajout du Canada dans la liste retournant 1 et suppression du Canada dans la liste retournant 2
+		if (in_array($country_code, array('FR', 'ES', 'GA', 'IT', 'NC', 'CA'))) {
 			return 1; // France, Spain, Gabon, ... - Not valid for CH
 		}
-		if (in_array($country_code, array('AD', 'AU', 'BE', 'CA', 'DE', 'DK', 'GR', 'GB', 'ID', 'IE', 'IR', 'KR', 'NL', 'NZ', 'UK', 'US'))) {
+		if (in_array($country_code, array('AD', 'AU', 'BE', 'DE', 'DK', 'GR', 'GB', 'ID', 'IE', 'IR', 'KR', 'NL', 'NZ', 'UK', 'US'))) {
 			return 2; // Australia, England...
 		}
 		return 0;
+		# ** DDE FIN
 	}
 
 	/**
